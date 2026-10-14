@@ -89,7 +89,7 @@ function kill(){charts.forEach(c=>c.remove());charts=[]}
 function home(){kill();const decks=["7 Macro","Crypto pairs","Lead/Lag","Regimes","BCB Checklist"];
  const mast=C.filter(c=>(S.box[c.id]||{b:0}).b>=3).length;
  $("app").innerHTML=`<h1>Correlation Lab</h1><p class="muted">${C.length} cards from real Yahoo + BLS data. ${mast} mastered.</p>
- <button class="big" onclick="go(null)">▶ Mixed review</button><div class="grid" style="margin-top:12px">${decks.map(d=>`<button onclick="go('${d}')">${d}<br><span class="muted" style="font-size:13px">${C.filter(c=>c.deck==d).length} cards</span></button>`).join("")}<button onclick="now()">📍 BCB state<br><span class="muted" style="font-size:13px">Oct 13 2026</span></button></div>`;}
+ <button class="big" onclick="go(null)">▶ Mixed review</button><div class="grid" style="margin-top:12px">${decks.map(d=>`<button onclick="go('${d}')">${d}<br><span class="muted" style="font-size:13px">${C.filter(c=>c.deck==d).length} cards</span></button>`).join("")}<button onclick="location.href='leaders.html'">⏱ Leaders &amp; Followers<br><span class="muted" style="font-size:13px">pump timing · money flow · Schwab 1:1</span></button><button onclick="now()">📍 BCB state<br><span class="muted" style="font-size:13px">Oct 13 2026</span></button></div>`;}
 function go(d){deck=d;show(pick(d))}
 let cur;
 function show(c){kill();cur=c;let h=`<span class="tag">${c.deck}</span><h2>${c.q}</h2>`;
