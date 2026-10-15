@@ -23,4 +23,4 @@ const Q=[["In BTC euphoria, the gold–BTC weekly correlation is about…",["+0.
 ["Gold vs S&P is most positively correlated when SPX is in…",["Euphoria","Bull","Capitulation"],2,`Capitulation ${h("GLD–SPX","capitulation")}, euphoria ${h("GLD–SPX","euphoria")}.`]];
 $("quiz").innerHTML=Q.map((q,i)=>`<div class="card"><b>${q[0]}</b>${q[1].map((o,j)=>`<button onclick="ans(${i},${j},this)">${o}</button>`).join("")}<div id="x${i}" class="muted"></div></div>`).join("");
 function ans(i,j,b){const q=Q[i],bs=b.parentNode.querySelectorAll("button");bs.forEach((x,k)=>{x.disabled=1;if(k==q[2])x.className="ok"});if(j!=q[2])b.className="no";$("x"+i).innerHTML=(j==q[2]?"✅ ":"❌ ")+q[3]}
-</script></body></html>
+</script><script src="https://code4crittersoncallapps.github.io/market-universe/nav.js" defer></script></body></html>
